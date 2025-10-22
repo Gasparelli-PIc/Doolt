@@ -25,7 +25,7 @@ public class UsuarioEntity {
     private String senha;
 
     @Column(name = "telefone")
-    private int telefone;
+    private String telefone;
 
     @Column(name = "cargo")
     private String cargo;

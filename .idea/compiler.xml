@@ -9,6 +9,9 @@
         <module name="doolt" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="doolt" target="25" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
