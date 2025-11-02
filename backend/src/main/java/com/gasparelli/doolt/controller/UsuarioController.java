@@ -32,7 +32,6 @@ public class UsuarioController {
         return usuarioServices.procurarUsuario(email, senha);
     }
 
-
     @DeleteMapping("/usuario/{id}")
     public ResponseEntity<Void> deletarUsuario(@PathVariable Long id){
         usuarioServices.deletarUsuarioPorID(id);
