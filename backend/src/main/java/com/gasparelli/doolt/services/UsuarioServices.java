@@ -16,10 +16,10 @@ public class UsuarioServices {
     }
 
     public UsuarioEntity procurarUsuario(String email, String senha){
-        return usuarioRepository.buscarUsuarioPorEmailESenha(email, senha);
+        return usuarioRepository.fyndByEmailAndSenha(email, senha);
     }
 
-    public void deletarUsuarioPorID(Long id){
+    public void deletarUsuarioPorID(Long id) {
         usuarioRepository.deleteById(id);
     }
 }
