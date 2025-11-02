@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import { DashboardStats } from "./components/dashboard-stats";
 import { TaskList } from "./components/task-list";
 import { ProgressChart } from "./components/progress-chart";
