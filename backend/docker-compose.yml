@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  doolt-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doolt-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      # Montar volume para persistir o banco de dados SQLite
+      - ./data:/app/data
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/data/BancoDoolt.db
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.sqlite.JDBC
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.community.dialect.SQLiteDialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+    restart: unless-stopped
+
