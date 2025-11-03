@@ -1,8 +1,9 @@
 package com.gasparelli.doolt.services;
 
-import com.gasparelli.doolt.model.UsuarioEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.gasparelli.doolt.model.UsuarioEntity;
 import com.gasparelli.doolt.repository.UsuarioRepository;
 
 @Service
@@ -16,7 +17,7 @@ public class UsuarioServices {
     }
 
     public UsuarioEntity procurarUsuario(String email, String senha){
-        return usuarioRepository.fyndByEmailAndSenha(email, senha);
+        return usuarioRepository.findByEmailAndSenha(email, senha);
     }
 
     public void deletarUsuarioPorID(Long id) {
